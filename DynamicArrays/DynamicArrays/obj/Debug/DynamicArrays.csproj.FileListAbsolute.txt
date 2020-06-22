@@ -1,0 +1,6 @@
+c:\users\a.t\documents\visual studio 2017\Projects\DynamicArrays\DynamicArrays\bin\Debug\DynamicArrays.exe.config
+c:\users\a.t\documents\visual studio 2017\Projects\DynamicArrays\DynamicArrays\bin\Debug\DynamicArrays.exe
+c:\users\a.t\documents\visual studio 2017\Projects\DynamicArrays\DynamicArrays\bin\Debug\DynamicArrays.pdb
+c:\users\a.t\documents\visual studio 2017\Projects\DynamicArrays\DynamicArrays\obj\Debug\DynamicArrays.csprojResolveAssemblyReference.cache
+c:\users\a.t\documents\visual studio 2017\Projects\DynamicArrays\DynamicArrays\obj\Debug\DynamicArrays.exe
+c:\users\a.t\documents\visual studio 2017\Projects\DynamicArrays\DynamicArrays\obj\Debug\DynamicArrays.pdb
