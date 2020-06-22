@@ -1,0 +1,13 @@
+c:\users\albert\documents\visual studio 2017\Projects\Exercise1\Exercise1\bin\Debug\Exercise1.exe.config
+c:\users\albert\documents\visual studio 2017\Projects\Exercise1\Exercise1\bin\Debug\Exercise1.exe
+c:\users\albert\documents\visual studio 2017\Projects\Exercise1\Exercise1\bin\Debug\Exercise1.pdb
+c:\users\albert\documents\visual studio 2017\Projects\Exercise1\Exercise1\obj\Debug\Exercise1.csprojResolveAssemblyReference.cache
+c:\users\albert\documents\visual studio 2017\Projects\Exercise1\Exercise1\obj\Debug\Exercise1.exe
+c:\users\albert\documents\visual studio 2017\Projects\Exercise1\Exercise1\obj\Debug\Exercise1.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 1\Exercise1\Exercise1\bin\Debug\Exercise1.exe.config
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 1\Exercise1\Exercise1\bin\Debug\Exercise1.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 1\Exercise1\Exercise1\bin\Debug\Exercise1.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 1\Exercise1\Exercise1\obj\Debug\Exercise1.csprojAssemblyReference.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 1\Exercise1\Exercise1\obj\Debug\Exercise1.csproj.CoreCompileInputs.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 1\Exercise1\Exercise1\obj\Debug\Exercise1.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 1\Exercise1\Exercise1\obj\Debug\Exercise1.pdb
