@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
-public abstract class DynamicArray
+public abstract class DynamicArray<T>
 {
        private const int ExpandMultilyFactor = 2;
-       protected int[] items;
+       protected T[] items;
        protected int count;
 
        #region Constructor
@@ -16,7 +16,7 @@ public abstract class DynamicArray
        /// </summary>
        protected DynamicArray()
        {
-              items = new int[4];
+              items = new T[4];
               count = 0;
        }
        
@@ -39,9 +39,9 @@ public abstract class DynamicArray
 
        #region Public Methods
 
-       public abstract void Add(int item);
-       public abstract bool Remove(int item);
-       public abstract int IndexOf(int item);
+       public abstract void Add(T item);
+       public abstract bool Remove(T item);
+       public abstract int IndexOf(T item);
 
        /// <summary>
        /// Removes all the items from the IntDynamicArray
@@ -79,7 +79,7 @@ public abstract class DynamicArray
        protected void Expand()
        {
               //We create a new array with the double of the original size
-              int[] newItems = new int[items.Length * ExpandMultilyFactor];
+              T[] newItems = new T[items.Length * ExpandMultilyFactor];
 
               //Copy elements from old array into new array
               for (int i = 0; i < items.Length; i++)
@@ -91,6 +91,6 @@ public abstract class DynamicArray
               items = newItems;
        }
        
-
        #endregion
+
 }

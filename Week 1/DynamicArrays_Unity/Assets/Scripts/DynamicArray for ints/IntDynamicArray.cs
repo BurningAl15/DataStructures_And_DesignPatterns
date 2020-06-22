@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class IntDynamicArray
 {
-          private const int ExpandMultilyFactor = 2;
+       private const int ExpandMultilyFactor = 2;
        protected int[] items;
        protected int count;
 
@@ -92,6 +92,4 @@ public abstract class IntDynamicArray
        }
        
        #endregion
-       
-       
 }
