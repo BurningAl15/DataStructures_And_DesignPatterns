@@ -94,7 +94,12 @@ public class OrderedDynamicArray<T> : DynamicArray<T> where T:IComparable
 
         return location;
     }
-    
+
+    public T GetElement(int index)
+    {
+        return items[index];
+    }
+
     #endregion
 
     #region Private Methods
