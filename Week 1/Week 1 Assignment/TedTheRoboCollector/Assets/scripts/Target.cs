@@ -38,10 +38,13 @@ public class Target : IComparable
     /// Gets the target game object
     /// </summary>
     /// <value>target game object</value>
+    
     public GameObject GameObject
     {
-        get { return gameObject; }
+        get => gameObject;
+        set => gameObject = value;
     }
+    
 	
     /// <summary>
     /// Gets the distance for the target
@@ -78,7 +81,29 @@ public class Target : IComparable
     public int CompareTo(object obj)
     {
         // replace the code below with your implementation
-        return 0;
+        // return 0;
+        
+        //Always greater than null
+        if (obj == null) return 1;
+        
+        //Check object type
+        Target otherTarget = obj as Target;
+
+        if (otherTarget != null)
+        {
+            // if (distance > otherTarget.Distance)
+            if (distance < otherTarget.Distance)
+                return 1;
+            else if (distance == otherTarget.Distance)
+                return 0;
+            else
+            {
+                return -1;
+            }
+        }
+        else
+            throw new ArgumentException("Object is near");
+
     }
 	
     /// <summary>
