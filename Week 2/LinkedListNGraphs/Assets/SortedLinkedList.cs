@@ -28,6 +28,7 @@ public class SortedLinkedList<T> : LinkedList<T> where T:IComparable
             //Find place to add new node
             LinkedListNode<T> previousNode = null;
             LinkedListNode<T> currentNode = head;
+            //O(n)
             while (currentNode != null && currentNode.Value.CompareTo(item) < 0)
             {
                 previousNode = currentNode;

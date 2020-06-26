@@ -1,0 +1,7 @@
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 1 - LinkedLists\LinkedLists\obj\Debug\LinkedLists.csprojAssemblyReference.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 1 - LinkedLists\LinkedLists\obj\Debug\LinkedLists.csproj.CoreCompileInputs.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 1 - LinkedLists\LinkedLists\obj\Debug\LinkedLists.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 1 - LinkedLists\LinkedLists\obj\Debug\LinkedLists.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 1 - LinkedLists\LinkedLists\bin\Debug\LinkedLists.exe.config
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 1 - LinkedLists\LinkedLists\bin\Debug\LinkedLists.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 1 - LinkedLists\LinkedLists\bin\Debug\LinkedLists.pdb

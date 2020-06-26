@@ -16,6 +16,7 @@ public class UnsortedLinkedList<T> : LinkedList<T>
     /// Adds the given item to the list
     /// </summary>
     /// <param name="item">Item to add</param>
+    /// O(1)
     public override void Add(T item)
     {
         //adding to empty list

@@ -56,6 +56,7 @@ public abstract class LinkedList<T>
             LinkedListNode<T> currentNode = head.Next;
 
             previousNode.Next = null;
+            //O(n)
             while (currentNode!=null)
             {
                 previousNode = currentNode;
@@ -93,6 +94,7 @@ public abstract class LinkedList<T>
             LinkedListNode<T> previousNode = head;
             LinkedListNode<T> currentNode = head.Next;
 
+            //O(n)
             while (currentNode != null && !currentNode.Value.Equals(item))
             {
                 previousNode = currentNode;
@@ -124,6 +126,8 @@ public abstract class LinkedList<T>
     public LinkedListNode<T> Find(T item)
     {
         LinkedListNode<T> currentNode = head;
+        
+        //O(n)
         while (currentNode != null && !currentNode.Value.Equals(item))
         {
             currentNode = currentNode.Next;
@@ -147,6 +151,8 @@ public abstract class LinkedList<T>
         StringBuilder builder=new StringBuilder();
         LinkedListNode<T> currentNode = head;
         int nodeCount = 0;
+
+        //O(n)
         while (currentNode != null)
         {
             nodeCount++;
