@@ -185,7 +185,7 @@ public class Graph<T>
     /// <param name="value">Value to find</param>
     /// <returns>Graph node or null if not found</returns>
     /// <exception cref="NotImplementedException"></exception>
-    private GraphNode<T> Find(T value)
+    public GraphNode<T> Find(T value)
     {
         foreach (GraphNode<T> node in nodes)
         {

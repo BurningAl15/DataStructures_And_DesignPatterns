@@ -18,7 +18,7 @@ public abstract class LinkedList<T>
     /// <summary>
     /// Constructor
     /// </summary>
-    protected LinkedList()
+    public LinkedList()
     {
         head = null;
         count = 0;

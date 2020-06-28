@@ -1,0 +1,6 @@
+c:\users\albert\documents\visual studio 2017\Projects\GraphSearching\GraphSearching\bin\Debug\GraphSearching.exe.config
+c:\users\albert\documents\visual studio 2017\Projects\GraphSearching\GraphSearching\bin\Debug\GraphSearching.exe
+c:\users\albert\documents\visual studio 2017\Projects\GraphSearching\GraphSearching\bin\Debug\GraphSearching.pdb
+c:\users\albert\documents\visual studio 2017\Projects\GraphSearching\GraphSearching\obj\Debug\GraphSearching.csprojResolveAssemblyReference.cache
+c:\users\albert\documents\visual studio 2017\Projects\GraphSearching\GraphSearching\obj\Debug\GraphSearching.exe
+c:\users\albert\documents\visual studio 2017\Projects\GraphSearching\GraphSearching\obj\Debug\GraphSearching.pdb

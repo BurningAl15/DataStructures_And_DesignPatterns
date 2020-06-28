@@ -1,0 +1,13 @@
+c:\users\albert\documents\visual studio 2017\Projects\GraphSearching\GraphSearching\bin\Debug\GraphSearching.exe.config
+c:\users\albert\documents\visual studio 2017\Projects\GraphSearching\GraphSearching\bin\Debug\GraphSearching.exe
+c:\users\albert\documents\visual studio 2017\Projects\GraphSearching\GraphSearching\bin\Debug\GraphSearching.pdb
+c:\users\albert\documents\visual studio 2017\Projects\GraphSearching\GraphSearching\obj\Debug\GraphSearching.csprojResolveAssemblyReference.cache
+c:\users\albert\documents\visual studio 2017\Projects\GraphSearching\GraphSearching\obj\Debug\GraphSearching.exe
+c:\users\albert\documents\visual studio 2017\Projects\GraphSearching\GraphSearching\obj\Debug\GraphSearching.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\GraphSearching_2\GraphSearching\bin\Debug\GraphSearching.exe.config
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\GraphSearching_2\GraphSearching\bin\Debug\GraphSearching.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\GraphSearching_2\GraphSearching\bin\Debug\GraphSearching.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\GraphSearching_2\GraphSearching\obj\Debug\GraphSearching.csprojAssemblyReference.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\GraphSearching_2\GraphSearching\obj\Debug\GraphSearching.csproj.CoreCompileInputs.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\GraphSearching_2\GraphSearching\obj\Debug\GraphSearching.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\GraphSearching_2\GraphSearching\obj\Debug\GraphSearching.pdb

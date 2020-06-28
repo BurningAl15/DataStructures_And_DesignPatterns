@@ -1,0 +1,41 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+/// <summary>
+/// Info about a node along a search path
+/// </summary>
+/// <typeparam name="T">type stored in graph node</typeparam>
+public class PathNodeInfo<T>
+{
+    #region Fields
+
+    GraphNode<T> previous;
+
+    #endregion
+
+    #region Constructors
+
+    /// <summary>
+    /// Creates an info node with the given previous node
+    /// </summary>
+    /// <param name="previous">previous node in path</param>
+    public PathNodeInfo(GraphNode<T> previous)
+    {
+        this.previous = previous;
+    }
+
+    #endregion
+
+    #region Properties
+
+    /// <summary>
+    /// Gets the previous graph node in the path
+    /// </summary>
+    public GraphNode<T> Previous
+    {
+        get { return previous; }
+    }
+
+    #endregion
+}
