@@ -1,0 +1,12 @@
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\Graphs\Graphs\bin\Debug\Graphs.exe.config
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\Graphs\Graphs\bin\Debug\Graphs.exe
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\Graphs\Graphs\bin\Debug\Graphs.pdb
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\Graphs\Graphs\obj\Debug\Graphs.exe
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\Graphs\Graphs\obj\Debug\Graphs.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 2 - Graphs\Graphs\bin\Debug\Graphs.exe.config
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 2 - Graphs\Graphs\bin\Debug\Graphs.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 2 - Graphs\Graphs\bin\Debug\Graphs.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 2 - Graphs\Graphs\obj\Debug\Graphs.csprojAssemblyReference.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 2 - Graphs\Graphs\obj\Debug\Graphs.csproj.CoreCompileInputs.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 2 - Graphs\Graphs\obj\Debug\Graphs.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 2\Exercise 2 - Graphs\Graphs\obj\Debug\Graphs.pdb
