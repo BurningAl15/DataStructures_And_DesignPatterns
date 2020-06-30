@@ -40,6 +40,7 @@ public class Searching : MonoBehaviour
         graph.AddNode(1);
         graph.AddNode(4);
         graph.AddNode(5);
+        
         graph.AddNode(7);
         graph.AddNode(10);
         graph.AddNode(11);
@@ -78,7 +79,8 @@ public class Searching : MonoBehaviour
         if (start == finish)
         {
             return start.ToString();
-        }else if (graph.Find(start) == null || graph.Find(finish) == null)
+        }
+        else if (graph.Find(start) == null || graph.Find(finish) == null)
         {
             //Start or finish not in graph
             return "";
@@ -98,6 +100,7 @@ public class Searching : MonoBehaviour
             {
                 //Extract front of search list
                 GraphNode<int> currentNode = searchList.First.Value;
+                print("Current Node: " + currentNode.Value);
                 searchList.RemoveFirst();
                 
                 //Explore each neighbor of this node

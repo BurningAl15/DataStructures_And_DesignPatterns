@@ -8,6 +8,7 @@ using UnityEngine;
 public class EdgeRenderer : MonoBehaviour
 {
     List<GameObject> lineRenderers;
+    // private Graph<Waypoint> graph;
 
 	/// <summary>
 	/// Use this for initialization
@@ -16,7 +17,9 @@ public class EdgeRenderer : MonoBehaviour
 	{
         // add a line renderer for each graph edge
         lineRenderers = new List<GameObject>();
-        Graph<Waypoint> graph = GraphBuilder.Graph;
+
+        Graph<Waypoint> graph= GraphBuilder.Graph;
+        
         foreach (GraphNode<Waypoint> node in graph.Nodes)
         {
             foreach (GraphNode<Waypoint> neighbor in node.Neighbors)

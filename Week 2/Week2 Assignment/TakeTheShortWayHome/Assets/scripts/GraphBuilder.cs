@@ -14,12 +14,12 @@ public class GraphBuilder : MonoBehaviour
     /// </summary>
     void Awake()
     {
-        graph=new Graph<Waypoint>();
+        graph = new Graph<Waypoint>();
         // add nodes (all waypoints, including start and end) to graph
         for (int i = 0; i < wayPoints.Count; i++)
             graph.AddNode(wayPoints[i]);
+
         // add edges to graph
-        
         for (int i = 0; i < wayPoints.Count; i++)
             for (int j = 0; j < wayPoints.Count; j++)
                 if (CanBeEdge(wayPoints[i].transform, wayPoints[j].transform))

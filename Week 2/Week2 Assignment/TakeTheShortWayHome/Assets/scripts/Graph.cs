@@ -29,10 +29,7 @@ public class Graph<T>
     /// <summary>
     /// Gets the number of nodes in the graph
     /// </summary>
-    public int Count
-    {
-        get { return nodes.Count; }
-    }
+    public int Count => nodes.Count;
 
     /// <summary>
     /// Gets a read-only list of the nodes in the graph
