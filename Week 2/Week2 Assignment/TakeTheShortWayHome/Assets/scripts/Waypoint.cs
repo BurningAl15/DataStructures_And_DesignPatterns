@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +12,13 @@ public class Waypoint : MonoBehaviour
     int id;
 
     public bool wasVisited = false;
+    public bool activate = false;
     [SerializeField] private GameObject explosion;
+
+    private void Start()
+    {
+    }
+
     /// <summary>
     /// Changes waypoint to green
     /// </summary>
@@ -19,9 +26,33 @@ public class Waypoint : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (this.name != "Start" && this.name != "End")
-            StartCoroutine(CallExplotion(.5f));
+        {
+            // wasVisited = true;
+            EventManager.AddPathTraversalCompleteListener(CallExplosion);
+            GetComponent<SpriteRenderer>().color = Color.green;
+        }
+        // StartCoroutine(CallExplotion(.5f));
     }
 
+    // private void Update()
+    // {
+    //     if (wasVisited && activate)
+    //     {
+    //         GetComponent<SpriteRenderer>().enabled = false;
+    //         GetComponent<Collider2D>().enabled = false;
+    //     
+    //         Instantiate(explosion, this.transform.position, Quaternion.identity);
+    //     }
+    // }
+
+    void CallExplosion()
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        
+        Instantiate(explosion, this.transform.position, Quaternion.identity);
+    }
+    
     IEnumerator CallExplotion(float _delay)
     {
         yield return new WaitForSeconds(_delay);

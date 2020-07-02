@@ -10,7 +10,9 @@ public class HUD : MonoBehaviour
 {
     [SerializeField]
     Text pathLengthText;
-
+	
+    private bool init=false;
+    private float maxDistance = 0;    
 	/// <summary>
 	/// Use this for initialization
 	/// </summary>
@@ -25,6 +27,12 @@ public class HUD : MonoBehaviour
     /// <param name="length">path length</param>
     void SetPathLength(float length)
     {
-	    pathLengthText.text = "Path Length: " + length;
+	    if (!init)
+	    {
+		    maxDistance = length;
+		    init = true;
+	    }
+	    
+	    pathLengthText.text = "Distance until goal: " + length + "\nPath Length: "+maxDistance;
     }
 }

@@ -46,6 +46,9 @@ public class EdgeRenderer : MonoBehaviour
                 lineRenderer.SetPosition(1, neighbor.Value.transform.position);
             }
         }
+        
+        EventManager.AddPathTraversalCompleteListener(StopDrawingEdges);
+
 	}
 
     /// <summary>
