@@ -1,0 +1,12 @@
+c:\users\albert\documents\visual studio 2017\Projects\RecursionBinarySearch\RecursionBinarySearch\bin\Debug\RecursionBinarySearch.exe.config
+c:\users\albert\documents\visual studio 2017\Projects\RecursionBinarySearch\RecursionBinarySearch\bin\Debug\RecursionBinarySearch.exe
+c:\users\albert\documents\visual studio 2017\Projects\RecursionBinarySearch\RecursionBinarySearch\bin\Debug\RecursionBinarySearch.pdb
+c:\users\albert\documents\visual studio 2017\Projects\RecursionBinarySearch\RecursionBinarySearch\obj\Debug\RecursionBinarySearch.csprojResolveAssemblyReference.cache
+c:\users\albert\documents\visual studio 2017\Projects\RecursionBinarySearch\RecursionBinarySearch\obj\Debug\RecursionBinarySearch.exe
+c:\users\albert\documents\visual studio 2017\Projects\RecursionBinarySearch\RecursionBinarySearch\obj\Debug\RecursionBinarySearch.pdb
+C:\Users\Albert\Dropbox\Coursera\4 Data Struct Des Patterns\Module 3 Stacks Queues and Trees\Lesson 3 Trees\Reading Recursion\RecursionCode\RecursionBinarySearch\RecursionBinarySearch\bin\Debug\RecursionBinarySearch.exe.config
+C:\Users\Albert\Dropbox\Coursera\4 Data Struct Des Patterns\Module 3 Stacks Queues and Trees\Lesson 3 Trees\Reading Recursion\RecursionCode\RecursionBinarySearch\RecursionBinarySearch\bin\Debug\RecursionBinarySearch.exe
+C:\Users\Albert\Dropbox\Coursera\4 Data Struct Des Patterns\Module 3 Stacks Queues and Trees\Lesson 3 Trees\Reading Recursion\RecursionCode\RecursionBinarySearch\RecursionBinarySearch\bin\Debug\RecursionBinarySearch.pdb
+C:\Users\Albert\Dropbox\Coursera\4 Data Struct Des Patterns\Module 3 Stacks Queues and Trees\Lesson 3 Trees\Reading Recursion\RecursionCode\RecursionBinarySearch\RecursionBinarySearch\obj\Debug\RecursionBinarySearch.csprojResolveAssemblyReference.cache
+C:\Users\Albert\Dropbox\Coursera\4 Data Struct Des Patterns\Module 3 Stacks Queues and Trees\Lesson 3 Trees\Reading Recursion\RecursionCode\RecursionBinarySearch\RecursionBinarySearch\obj\Debug\RecursionBinarySearch.exe
+C:\Users\Albert\Dropbox\Coursera\4 Data Struct Des Patterns\Module 3 Stacks Queues and Trees\Lesson 3 Trees\Reading Recursion\RecursionCode\RecursionBinarySearch\RecursionBinarySearch\obj\Debug\RecursionBinarySearch.pdb

@@ -1,0 +1,6 @@
+c:\users\albert\documents\visual studio 2017\Projects\Queues\Queues\bin\Debug\Queues.exe.config
+c:\users\albert\documents\visual studio 2017\Projects\Queues\Queues\bin\Debug\Queues.exe
+c:\users\albert\documents\visual studio 2017\Projects\Queues\Queues\bin\Debug\Queues.pdb
+c:\users\albert\documents\visual studio 2017\Projects\Queues\Queues\obj\Debug\Queues.csprojResolveAssemblyReference.cache
+c:\users\albert\documents\visual studio 2017\Projects\Queues\Queues\obj\Debug\Queues.exe
+c:\users\albert\documents\visual studio 2017\Projects\Queues\Queues\obj\Debug\Queues.pdb

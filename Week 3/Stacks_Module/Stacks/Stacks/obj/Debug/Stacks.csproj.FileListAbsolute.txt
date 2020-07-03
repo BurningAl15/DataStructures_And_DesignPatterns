@@ -1,0 +1,13 @@
+c:\users\albert\documents\visual studio 2017\Projects\Stacks\Stacks\bin\Debug\Stacks.exe.config
+c:\users\albert\documents\visual studio 2017\Projects\Stacks\Stacks\bin\Debug\Stacks.exe
+c:\users\albert\documents\visual studio 2017\Projects\Stacks\Stacks\bin\Debug\Stacks.pdb
+c:\users\albert\documents\visual studio 2017\Projects\Stacks\Stacks\obj\Debug\Stacks.csprojResolveAssemblyReference.cache
+c:\users\albert\documents\visual studio 2017\Projects\Stacks\Stacks\obj\Debug\Stacks.exe
+c:\users\albert\documents\visual studio 2017\Projects\Stacks\Stacks\obj\Debug\Stacks.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Stacks\Stacks\bin\Debug\Stacks.exe.config
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Stacks\Stacks\bin\Debug\Stacks.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Stacks\Stacks\bin\Debug\Stacks.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Stacks\Stacks\obj\Debug\Stacks.csprojAssemblyReference.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Stacks\Stacks\obj\Debug\Stacks.csproj.CoreCompileInputs.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Stacks\Stacks\obj\Debug\Stacks.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Stacks\Stacks\obj\Debug\Stacks.pdb

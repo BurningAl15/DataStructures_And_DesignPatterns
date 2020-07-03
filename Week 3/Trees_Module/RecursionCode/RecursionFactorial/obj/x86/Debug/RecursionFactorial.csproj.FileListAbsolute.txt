@@ -1,0 +1,10 @@
+C:\Courses\GDD 2200\Readings\Recursion\Code\RecursionFactorial\bin\Debug\RecursionFactorial.exe
+C:\Courses\GDD 2200\Readings\Recursion\Code\RecursionFactorial\bin\Debug\RecursionFactorial.pdb
+C:\Courses\GDD 2200\Readings\Recursion\Code\RecursionFactorial\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Courses\GDD 2200\Readings\Recursion\Code\RecursionFactorial\obj\x86\Debug\RecursionFactorial.exe
+C:\Courses\GDD 2200\Readings\Recursion\Code\RecursionFactorial\obj\x86\Debug\RecursionFactorial.pdb
+C:\Users\Albert\Dropbox\Coursera\4 Data Struct Des Patterns\Module 3 Stacks Queues and Trees\Lesson 3 Trees\Reading Recursion\RecursionCode\RecursionFactorial\bin\Debug\RecursionFactorial.exe
+C:\Users\Albert\Dropbox\Coursera\4 Data Struct Des Patterns\Module 3 Stacks Queues and Trees\Lesson 3 Trees\Reading Recursion\RecursionCode\RecursionFactorial\bin\Debug\RecursionFactorial.pdb
+C:\Users\Albert\Dropbox\Coursera\4 Data Struct Des Patterns\Module 3 Stacks Queues and Trees\Lesson 3 Trees\Reading Recursion\RecursionCode\RecursionFactorial\obj\x86\Debug\RecursionFactorial.csprojResolveAssemblyReference.cache
+C:\Users\Albert\Dropbox\Coursera\4 Data Struct Des Patterns\Module 3 Stacks Queues and Trees\Lesson 3 Trees\Reading Recursion\RecursionCode\RecursionFactorial\obj\x86\Debug\RecursionFactorial.exe
+C:\Users\Albert\Dropbox\Coursera\4 Data Struct Des Patterns\Module 3 Stacks Queues and Trees\Lesson 3 Trees\Reading Recursion\RecursionCode\RecursionFactorial\obj\x86\Debug\RecursionFactorial.pdb

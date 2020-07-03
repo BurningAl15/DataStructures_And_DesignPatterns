@@ -1,0 +1,13 @@
+c:\users\albert\documents\visual studio 2017\Projects\Trees\Trees\bin\Debug\Trees.exe.config
+c:\users\albert\documents\visual studio 2017\Projects\Trees\Trees\bin\Debug\Trees.exe
+c:\users\albert\documents\visual studio 2017\Projects\Trees\Trees\bin\Debug\Trees.pdb
+c:\users\albert\documents\visual studio 2017\Projects\Trees\Trees\obj\Debug\Trees.csprojResolveAssemblyReference.cache
+c:\users\albert\documents\visual studio 2017\Projects\Trees\Trees\obj\Debug\Trees.exe
+c:\users\albert\documents\visual studio 2017\Projects\Trees\Trees\obj\Debug\Trees.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Trees\Trees\bin\Debug\Trees.exe.config
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Trees\Trees\bin\Debug\Trees.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Trees\Trees\bin\Debug\Trees.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Trees\Trees\obj\Debug\Trees.csprojAssemblyReference.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Trees\Trees\obj\Debug\Trees.csproj.CoreCompileInputs.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Trees\Trees\obj\Debug\Trees.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Trees\Trees\obj\Debug\Trees.pdb
