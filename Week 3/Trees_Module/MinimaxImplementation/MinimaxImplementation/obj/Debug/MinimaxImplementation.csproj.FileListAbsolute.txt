@@ -1,0 +1,6 @@
+c:\users\albert\documents\visual studio 2017\Projects\MinimaxImplementation\MinimaxImplementation\bin\Debug\MinimaxImplementation.exe.config
+c:\users\albert\documents\visual studio 2017\Projects\MinimaxImplementation\MinimaxImplementation\bin\Debug\MinimaxImplementation.exe
+c:\users\albert\documents\visual studio 2017\Projects\MinimaxImplementation\MinimaxImplementation\bin\Debug\MinimaxImplementation.pdb
+c:\users\albert\documents\visual studio 2017\Projects\MinimaxImplementation\MinimaxImplementation\obj\Debug\MinimaxImplementation.csprojResolveAssemblyReference.cache
+c:\users\albert\documents\visual studio 2017\Projects\MinimaxImplementation\MinimaxImplementation\obj\Debug\MinimaxImplementation.exe
+c:\users\albert\documents\visual studio 2017\Projects\MinimaxImplementation\MinimaxImplementation\obj\Debug\MinimaxImplementation.pdb

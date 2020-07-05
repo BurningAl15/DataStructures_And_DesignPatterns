@@ -1,0 +1,13 @@
+c:\users\albert\documents\visual studio 2017\Projects\Exercise10\Exercise10\bin\Debug\Exercise10.exe.config
+c:\users\albert\documents\visual studio 2017\Projects\Exercise10\Exercise10\bin\Debug\Exercise10.exe
+c:\users\albert\documents\visual studio 2017\Projects\Exercise10\Exercise10\bin\Debug\Exercise10.pdb
+c:\users\albert\documents\visual studio 2017\Projects\Exercise10\Exercise10\obj\Debug\Exercise10.csprojResolveAssemblyReference.cache
+c:\users\albert\documents\visual studio 2017\Projects\Exercise10\Exercise10\obj\Debug\Exercise10.exe
+c:\users\albert\documents\visual studio 2017\Projects\Exercise10\Exercise10\obj\Debug\Exercise10.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Exercise10\Exercise10\obj\Debug\Exercise10.csprojAssemblyReference.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Exercise10\Exercise10\obj\Debug\Exercise10.csproj.CoreCompileInputs.cache
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Exercise10\Exercise10\obj\Debug\Exercise10.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Exercise10\Exercise10\obj\Debug\Exercise10.pdb
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Exercise10\Exercise10\bin\Debug\Exercise10.exe.config
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Exercise10\Exercise10\bin\Debug\Exercise10.exe
+D:\Coursera\UCS\DataStructures And DesignPatterns\Week 3\Trees_Module\Exercise10\Exercise10\bin\Debug\Exercise10.pdb

@@ -1,0 +1,6 @@
+c:\users\albert\documents\visual studio 2017\Projects\TreeTraversal\TreeTraversal\bin\Debug\TreeTraversal.exe.config
+c:\users\albert\documents\visual studio 2017\Projects\TreeTraversal\TreeTraversal\bin\Debug\TreeTraversal.exe
+c:\users\albert\documents\visual studio 2017\Projects\TreeTraversal\TreeTraversal\bin\Debug\TreeTraversal.pdb
+c:\users\albert\documents\visual studio 2017\Projects\TreeTraversal\TreeTraversal\obj\Debug\TreeTraversal.csprojResolveAssemblyReference.cache
+c:\users\albert\documents\visual studio 2017\Projects\TreeTraversal\TreeTraversal\obj\Debug\TreeTraversal.exe
+c:\users\albert\documents\visual studio 2017\Projects\TreeTraversal\TreeTraversal\obj\Debug\TreeTraversal.pdb
