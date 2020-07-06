@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 /// <summary>
 /// Game manager
@@ -15,7 +17,13 @@ public class DontTakeTheLastTeddy : MonoBehaviour
     // events invoked by class
     TakeTurn takeTurnEvent = new TakeTurn();
     GameOver gameOverEvent = new GameOver();
+    GameStarting gameStarting=new GameStarting();
 
+    private Timer timerGame;
+    [SerializeField] int n = 5;
+
+    private int counter = 0;
+    
     /// <summary>
     /// Awake is called before Start
     /// </summary>
@@ -26,19 +34,73 @@ public class DontTakeTheLastTeddy : MonoBehaviour
         player1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player>();
         player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player>();
 
+        timerGame = gameObject.AddComponent<Timer>();
+        // AddTimerGameStarting(HandleThinkingTimerFinished);
+
         // register as invoker and listener
         EventManager.AddTakeTurnInvoker(this);
         EventManager.AddGameOverInvoker(this);
+        EventManager.AddGameStartedInvoker(this);
+        
         EventManager.AddTurnOverListener(HandleTurnOverEvent);
     }
 
+    public void AddTimerGameStartingListener(UnityAction listener)
+    {
+        gameStarting.AddListener(listener);
+    }
+    
 	/// <summary>
 	/// Use this for initialization
 	/// </summary>
 	void Start()
-	{
-        StartGame(PlayerName.Player1, Difficulty.Hard, Difficulty.Hard);
+    {
+        int diff1 = Random.Range(0, 3);
+        int diff2 = Random.Range(0, 3);
+
+        StartGame((PlayerName) (counter % 2)
+            , (Difficulty) diff1
+            , (Difficulty) diff2);
+        
+        timerGame.Duration = GameConstants.AiThinkSeconds;
+        timerGame.Run();
+        
+        print((PlayerName) (counter % 2) + " started");
+        print("Player 1 Difficulty: "+(Difficulty)diff1);
+        print("Player 2 Difficulty: "+(Difficulty)diff2);
     }
+
+    private float currentWaitTime = 0;
+    private float waitTime = 3;
+    
+    private void Update()
+    {
+        if (timerGame.Finished)
+        {
+            currentWaitTime += Time.deltaTime;
+            
+            if (counter < n && currentWaitTime>=waitTime)
+            {
+                counter++;
+                int diff1 = Random.Range(0, 3);
+                int diff2 = Random.Range(0, 3);
+                
+                StartGame((PlayerName) (counter % 2)
+                    , (Difficulty) diff1
+                    , (Difficulty) diff2);
+                
+                print((PlayerName) (counter % 2) + " started");
+                print("Player 1 Difficulty: " + (Difficulty) diff1);
+                print("Player 2 Difficulty: " + (Difficulty) diff2);
+                
+                timerGame.Duration = GameConstants.AiThinkSeconds;
+                timerGame.Run();
+                gameStarting.Invoke();
+                currentWaitTime = 0;
+            }
+        }
+    }
+
 
     /// <summary>
     /// Adds the given listener for the TakeTurn event
@@ -96,10 +158,12 @@ public class DontTakeTheLastTeddy : MonoBehaviour
             if (player == PlayerName.Player1)
             {
                 gameOverEvent.Invoke(PlayerName.Player2);
+                print("------- Player 2 Win! --------");
             }
             else
             {
                 gameOverEvent.Invoke(PlayerName.Player1);
+                print("------- Player 1 Win! --------");
             }
         }
         else

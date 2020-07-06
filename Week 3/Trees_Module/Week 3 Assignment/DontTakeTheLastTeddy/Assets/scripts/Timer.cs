@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
     // support for TimerFinished event
     bool started = false;
     TimerFinished timerFinished = new TimerFinished();
-
+    
     #endregion
 
     #region Properties
@@ -144,6 +144,6 @@ public class Timer : MonoBehaviour
     {
         timerFinished.AddListener(listener);
     }
-
+    
     #endregion
 }

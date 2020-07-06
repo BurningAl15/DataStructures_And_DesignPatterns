@@ -24,6 +24,7 @@ public class Hud : MonoBehaviour
         EventManager.AddTakeTurnListener(HandleTakeTurnEvent);
         EventManager.AddTurnOverListener(HandleTurnOverEvent);
         EventManager.AddGameOverListener(HandleGameOverEvent);
+        EventManager.AddGameStartedListener(HandleGameStartedEvent);
 
         // hide game over text
         gameOverText.enabled = false;
@@ -95,5 +96,18 @@ public class Hud : MonoBehaviour
             gameOverText.text = "Player 2 Won!";
         }
         gameOverText.enabled = true;
+    }
+    
+    void HandleGameStartedEvent()
+    {
+        // if (player == PlayerName.Player1)
+        // {
+        //     gameOverText.text = "Player 1 Won!";
+        // }
+        // else
+        // {
+        //     gameOverText.text = "Player 2 Won!";
+        // }
+        gameOverText.enabled = false;
     }
 }

@@ -23,6 +23,11 @@ public static class EventManager
         new List<DontTakeTheLastTeddy>();
     static List<UnityAction<PlayerName>> gameOverListeners =
         new List<UnityAction<PlayerName>>();
+
+    static List<DontTakeTheLastTeddy> gameStartedInvokers = 
+        new List<DontTakeTheLastTeddy>();
+    static List<UnityAction> gameStartedListeners =
+        new List<UnityAction>();
     
     #endregion
 
@@ -107,5 +112,23 @@ public static class EventManager
         }
     }
 
+    public static void AddGameStartedInvoker(DontTakeTheLastTeddy invoker)
+    {
+        gameStartedInvokers.Add(invoker);
+        foreach (UnityAction listener in gameStartedListeners)
+        {
+            invoker.AddTimerGameStartingListener(listener);
+        }
+    }
+
+    public static void AddGameStartedListener(UnityAction listener)
+    {
+        gameStartedListeners.Add(listener);
+        foreach(DontTakeTheLastTeddy invoker in gameStartedInvokers)
+        {
+            invoker.AddTimerGameStartingListener(listener);
+        }
+    }
+    
     #endregion
 }

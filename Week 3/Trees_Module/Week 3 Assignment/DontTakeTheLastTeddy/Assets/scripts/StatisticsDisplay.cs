@@ -43,7 +43,19 @@ public class StatisticsDisplay : MonoBehaviour
 	/// </summary>
 	void Start()
 	{
-
-
+		// EventManager.AddGameStartedListener(HandleGameStartedEvent);
     }
+    
+    // void HandleGameStartedEvent(PlayerName player)
+    // {
+	   //  // if (player == PlayerName.Player1)
+	   //  // {
+		  //  //  gameOverText.text = "Player 1 Won!";
+	   //  // }
+	   //  // else
+	   //  // {
+		  //  //  gameOverText.text = "Player 2 Won!";
+	   //  // }
+	   //  // gameOverText.enabled = true;
+    // }
 }

@@ -108,6 +108,10 @@ public class Player : MonoBehaviour
         if (player == myName)
         {
             tree = BuildTree(boardConfiguration);
+            MinimaxTreeNode<Configuration> node = tree.Find(boardConfiguration);
+            
+            // print( "Getting max depth: " + MaxDepth(node,tree));
+
             thinkingTimer.Run();
         }
     }
@@ -124,6 +128,9 @@ public class Player : MonoBehaviour
         MinimaxTree<Configuration> tree =
             new MinimaxTree<Configuration>(boardConfiguration);
         nodeList.Clear();
+        
+        // print(tree.Root.MinimaxScore);
+        
         nodeList.AddLast(tree.Root);
         while (nodeList.Count > 0)
         {
@@ -139,8 +146,12 @@ public class Player : MonoBehaviour
                 MinimaxTreeNode<Configuration> childNode =
                     new MinimaxTreeNode<Configuration>(
                         child, currentNode);
-                tree.AddNode(childNode);
-                nodeList.AddLast(childNode);
+
+                if (childNode.MinimaxScore <= searchDepth)
+                {
+                    tree.AddNode(childNode);
+                    nodeList.AddLast(childNode);
+                }
             }
         }
         return tree;
@@ -200,6 +211,26 @@ public class Player : MonoBehaviour
         return newConfigurations;
     }
 
+    int MaxDepth(MinimaxTreeNode<Configuration> node,MinimaxTree<Configuration> tree)
+    {
+        int depth = 0;
+        
+        if (node == null)
+            return 0;
+        else if (node == tree.Root)
+        {
+            return depth;
+        }
+        else
+        {
+            depth = MaxDepth(node.Parent,tree);
+        }
+
+        return depth;
+    }
+    
+    // int FillHeight()
+    
     /// <summary>
     /// Assigns minimax scores to the tree nodes
     /// </summary>
