@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 /// <summary>
@@ -20,9 +23,14 @@ public class DontTakeTheLastTeddy : MonoBehaviour
     GameStarting gameStarting=new GameStarting();
 
     private Timer timerGame;
-    [SerializeField] int n = 5;
+    [SerializeField] int n = 100;
 
     private int counter = 0;
+    private bool gameEnd = false;
+    
+    List<int> winCounts=new List<int>();
+
+    [SerializeField] private Text lapText;
     
     /// <summary>
     /// Awake is called before Start
@@ -35,7 +43,11 @@ public class DontTakeTheLastTeddy : MonoBehaviour
         player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player>();
 
         timerGame = gameObject.AddComponent<Timer>();
-        // AddTimerGameStarting(HandleThinkingTimerFinished);
+
+        for (int i = 0; i < 12; i++)
+        {
+            winCounts.Add(0);
+        }
 
         // register as invoker and listener
         EventManager.AddTakeTurnInvoker(this);
@@ -55,48 +67,110 @@ public class DontTakeTheLastTeddy : MonoBehaviour
 	/// </summary>
 	void Start()
     {
-        int diff1 = Random.Range(0, 3);
-        int diff2 = Random.Range(0, 3);
+        Difficulty diff1;
+        Difficulty diff2;
+
+        if (counter < 100)
+        {
+            diff1 = Difficulty.Easy;
+            diff2 = Difficulty.Easy;
+        }
+        else if (counter >= 100 && counter < 200)
+        {
+            diff1 = Difficulty.Medium;
+            diff2 = Difficulty.Medium;
+        }
+        else if (counter >= 200 && counter < 300)
+        {
+            diff1 = Difficulty.Hard;
+            diff2 = Difficulty.Hard;
+        }
+        else if (counter >= 300 && counter < 400)
+        {
+            diff1 = Difficulty.Medium;
+            diff2 = Difficulty.Easy;
+        }
+        else if (counter >= 400 && counter < 500)
+        {
+            diff1 = Difficulty.Hard;
+            diff2 = Difficulty.Easy;
+        }
+        else 
+        {
+            diff1 = Difficulty.Hard;
+            diff2 = Difficulty.Medium;
+        }
+        lapText.text = "Lap: " + counter + " of 600";
 
         StartGame((PlayerName) (counter % 2)
-            , (Difficulty) diff1
-            , (Difficulty) diff2);
-        
+            , diff1
+            , diff2);
+
         timerGame.Duration = GameConstants.AiThinkSeconds;
         timerGame.Run();
-        
-        print((PlayerName) (counter % 2) + " started");
-        print("Player 1 Difficulty: "+(Difficulty)diff1);
-        print("Player 2 Difficulty: "+(Difficulty)diff2);
     }
 
     private float currentWaitTime = 0;
-    private float waitTime = 3;
+    private float waitTime = .01f;
     
     private void Update()
     {
-        if (timerGame.Finished)
+        if (timerGame.Finished && gameEnd)
         {
             currentWaitTime += Time.deltaTime;
             
             if (counter < n && currentWaitTime>=waitTime)
             {
                 counter++;
-                int diff1 = Random.Range(0, 3);
-                int diff2 = Random.Range(0, 3);
+                Difficulty diff1;
+                Difficulty diff2;
+
+                if (counter < 100)
+                {
+                    diff1 = Difficulty.Easy;
+                    diff2 = Difficulty.Easy;
+                }
+                else if (counter >= 100 && counter < 200)
+                {
+                    diff1 = Difficulty.Medium;
+                    diff2 = Difficulty.Medium;
+                }
+                else if (counter >= 200 && counter < 300)
+                {
+                    diff1 = Difficulty.Hard;
+                    diff2 = Difficulty.Hard;
+                }
+                else if (counter >= 300 && counter < 400)
+                {
+                    diff1 = Difficulty.Medium;
+                    diff2 = Difficulty.Easy;
+                }
+                else if (counter >= 400 && counter < 500)
+                {
+                    diff1 = Difficulty.Hard;
+                    diff2 = Difficulty.Easy;
+                }
+                else 
+                {
+                    diff1 = Difficulty.Hard;
+                    diff2 = Difficulty.Medium;
+                }
                 
                 StartGame((PlayerName) (counter % 2)
-                    , (Difficulty) diff1
-                    , (Difficulty) diff2);
+                    , diff1
+                    , diff2);
                 
-                print((PlayerName) (counter % 2) + " started");
-                print("Player 1 Difficulty: " + (Difficulty) diff1);
-                print("Player 2 Difficulty: " + (Difficulty) diff2);
-                
+                lapText.text = "Lap: " + counter + " of 600";
+
                 timerGame.Duration = GameConstants.AiThinkSeconds;
                 timerGame.Run();
                 gameStarting.Invoke();
+                gameEnd = false;
                 currentWaitTime = 0;
+            }
+            else if (counter >= n)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             }
         }
     }
@@ -158,13 +232,94 @@ public class DontTakeTheLastTeddy : MonoBehaviour
             if (player == PlayerName.Player1)
             {
                 gameOverEvent.Invoke(PlayerName.Player2);
-                print("------- Player 2 Win! --------");
+                // print("------- Player 2 Win! --------");
             }
             else
             {
                 gameOverEvent.Invoke(PlayerName.Player1);
-                print("------- Player 1 Win! --------");
+                // print("------- Player 1 Win! --------");
             }
+
+            if (counter < 100)
+            {
+                if (player == PlayerName.Player1)
+                {
+                    winCounts[0]++;
+                    PlayerPrefs.SetInt(PlayerPrefsInitials.ezez+"1", winCounts[0]);
+                }
+                else
+                {
+                    winCounts[1]++;
+                    PlayerPrefs.SetInt(PlayerPrefsInitials.ezez+"2", winCounts[1]);
+                }
+            }
+            else if (counter >= 100 && counter < 200)
+            {
+                if (player == PlayerName.Player1)
+                {
+                    winCounts[2]++;
+                    PlayerPrefs.SetInt(PlayerPrefsInitials.mdmd+"1", winCounts[2]);
+                }
+                else
+                {
+                    winCounts[3]++;
+                    PlayerPrefs.SetInt(PlayerPrefsInitials.mdmd+"2", winCounts[3]);
+                }
+            }
+            else if (counter >= 200 && counter < 300)
+            {
+                if (player == PlayerName.Player1)
+                {
+                    winCounts[4]++;
+                    PlayerPrefs.SetInt(PlayerPrefsInitials.hdhd+"1", winCounts[4]);
+                }
+                else
+                {
+                    winCounts[5]++;
+                    PlayerPrefs.SetInt(PlayerPrefsInitials.hdhd+"2", winCounts[5]);
+                }
+            }
+            else if (counter >= 300 && counter < 400)
+            {
+                if (player == PlayerName.Player1)
+                {
+                    winCounts[6]++;
+                    PlayerPrefs.SetInt(PlayerPrefsInitials.ezmd+"1", winCounts[6]);
+                }
+                else
+                {
+                    winCounts[7]++;
+                    PlayerPrefs.SetInt(PlayerPrefsInitials.ezmd+"2", winCounts[7]);
+                }
+            }
+            else if (counter >= 400 && counter < 500)
+            {
+                if (player == PlayerName.Player1)
+                {
+                    winCounts[8]++;
+                    PlayerPrefs.SetInt(PlayerPrefsInitials.ezhd+"1", winCounts[8]);
+                }
+                else
+                {
+                    winCounts[9]++;
+                    PlayerPrefs.SetInt(PlayerPrefsInitials.ezhd+"2", winCounts[9]);
+                }
+            }
+            else 
+            {
+                if (player == PlayerName.Player1)
+                {
+                    winCounts[10]++;
+                    PlayerPrefs.SetInt(PlayerPrefsInitials.mdhd+"1", winCounts[10]);
+                }
+                else
+                {
+                    winCounts[11]++;
+                    PlayerPrefs.SetInt(PlayerPrefsInitials.mdhd+"2", winCounts[11]);
+                }
+            }
+            
+            gameEnd = true;
         }
         else
         {

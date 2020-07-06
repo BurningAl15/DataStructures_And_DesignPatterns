@@ -68,9 +68,9 @@ public class MinimaxTreeNode<T>
         get { return minimaxScore; }
         set { minimaxScore = value; }
     }
-
+    
     #endregion
-
+    
     #region Methods
 
     /// <summary>

@@ -57,6 +57,24 @@ public class Configuration
             return true;
         }
     }
+    
+    public List<int> NonEmptyBins
+    {
+        get
+        {
+            List<int> temp=new List<int>();
+            foreach (int bin in bins)
+            {
+                if (bin > 0)
+                {
+                    temp.Add(bin);
+                }
+            }
+
+            return temp;
+        }
+    }
+
 
     #endregion
 

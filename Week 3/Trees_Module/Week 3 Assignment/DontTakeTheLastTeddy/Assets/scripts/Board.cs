@@ -85,10 +85,10 @@ public class Board : MonoBehaviour
         List<int> binContents = new List<int>();
         for (int i = 0; i < iTemp; i++)
         {
-            binContents.Add(Random.Range(1,GameConstants.MaxBearsPerBin)); //2
+            binContents.Add(Random.Range(1, GameConstants.MaxBearsPerBin + 1)); //2
         }
         configuration = new Configuration(binContents);
-
+        
         // set counts for bin game objects
         SetBinCounts(binContents);
     }
