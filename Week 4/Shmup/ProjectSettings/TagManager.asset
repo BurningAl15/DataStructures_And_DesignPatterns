@@ -16,10 +16,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - EnemyBullet
+  - Bullet
+  - Enemy
+  - Player
   - 
   - 
   - 

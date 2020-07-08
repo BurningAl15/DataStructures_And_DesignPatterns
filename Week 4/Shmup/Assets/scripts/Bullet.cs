@@ -19,8 +19,8 @@ public class Bullet : IntEventInvoker
         rgb = GetComponent<Rigidbody2D>();
 
         // add as invoker for PointsAddedEvent
-        // unityEvents.Add(EventName.PointsAddedEvent, new PointsAddedEvent());
-        // EventManager.AddInvoker(EventName.PointsAddedEvent, this);
+        unityEvents.Add(EventName.PointsAddedEvent, new PointsAddedEvent());
+        EventManager.AddInvoker(EventName.PointsAddedEvent, this);
     }
     
     /// <summary>
@@ -30,7 +30,7 @@ public class Bullet : IntEventInvoker
     {
         // apply impulse force to get projectile moving
         rgb.AddForce(
-            new Vector2(0, ConfigurationUtils.FrenchFriesImpulseForce),
+            new Vector2(ConfigurationUtils.FrenchFriesImpulseForce, 0),
             ForceMode2D.Impulse);
     }
     
@@ -49,7 +49,7 @@ public class Bullet : IntEventInvoker
     void OnBecameInvisible()
     {
         // return to the pool
-        BulletPool.ReturnFrenchFries(gameObject);
+        BulletPool.ReturnBullets(gameObject);
     }
 
     /// <summary>
@@ -62,13 +62,14 @@ public class Bullet : IntEventInvoker
         // and return self to pool
         if (other.gameObject.CompareTag("Enemy"))
         {
-            // unityEvents[EventName.PointsAddedEvent].Invoke(ConfigurationUtils.BearPoints);
+            unityEvents[EventName.PointsAddedEvent].Invoke(ConfigurationUtils.BearPoints);
             Instantiate(prefabExplosion, 
                 other.gameObject.transform.position, Quaternion.identity);
-            Destroy(other.gameObject);
+            // Destroy(other.gameObject);
             Instantiate(prefabExplosion, 
                 transform.position, Quaternion.identity);
-            BulletPool.ReturnFrenchFries(gameObject);
+            BulletPool.ReturnBullets(gameObject);
+            EnemyPool.ReturnEnemies(other.gameObject);
         }
         else if (other.gameObject.CompareTag ("EnemyProjectile"))
         {
@@ -79,7 +80,7 @@ public class Bullet : IntEventInvoker
             Destroy(other.gameObject);
             Instantiate(prefabExplosion, 
                 transform.position, Quaternion.identity);
-            BulletPool.ReturnFrenchFries(gameObject);
+            BulletPool.ReturnBullets(gameObject);
         }
     }
     

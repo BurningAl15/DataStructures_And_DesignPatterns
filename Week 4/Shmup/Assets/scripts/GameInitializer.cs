@@ -16,6 +16,7 @@ public class GameInitializer : MonoBehaviour
 		DifficultyUtils.Initialize();
 		ConfigurationUtils.Initialize();
         // FrenchFriesPool.Initialize();
+        EnemyPool.Initialize();
         BulletPool.Initialize();
 	}
 }

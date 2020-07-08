@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : IntEventInvoker
 {
     // saved for instantiating prefabs
     [SerializeField]
@@ -12,15 +13,21 @@ public class PlayerManager : MonoBehaviour
     float colliderHalfWidth;
     float colliderHalfHeight;
 
+    // health support
+    int health = 100;
+    
     // saved for efficient boundary checking
     float screenLeft;
     float screenRight;
     float screenTop;
     float screenBottom;
     
+    // firing support
     bool canShoot = true;
     Timer cooldownTimer;
     const float FrenchFriesPositionOffset = 0.7f;
+
+    [SerializeField] private List<Transform> shootPos=new List<Transform>();
     
     void Start()
     {
@@ -44,10 +51,10 @@ public class PlayerManager : MonoBehaviour
         colliderHalfHeight = diff.y / 2;
 
         // add as event invoker for events
-        // unityEvents.Add(EventName.HealthChangedEvent, new HealthChangedEvent());
-        // EventManager.AddInvoker(EventName.HealthChangedEvent, this);
-        // unityEvents.Add(EventName.GameOverEvent, new GameOverEvent());
-        // EventManager.AddInvoker(EventName.GameOverEvent, this);
+        unityEvents.Add(EventName.HealthChangedEvent, new HealthChangedEvent());
+        EventManager.AddInvoker(EventName.HealthChangedEvent, this);
+        unityEvents.Add(EventName.GameOverEvent, new GameOverEvent());
+        EventManager.AddInvoker(EventName.GameOverEvent, this);
         
         // set up cooldown timer
         cooldownTimer = gameObject.AddComponent<Timer>();
@@ -61,17 +68,17 @@ public class PlayerManager : MonoBehaviour
         Vector3 position = transform.position;
 
         // get new horizontal position
-        float horizontalInput = Input.GetAxis("Horizontal");
-        if (horizontalInput < 0)
-        {
-            position.x += horizontalInput * ConfigurationUtils.BurgerMoveUnitsPerSecond * 
-                          Time.deltaTime;
-        }
-        else if (horizontalInput > 0)
-        {
-            position.x += horizontalInput * ConfigurationUtils.BurgerMoveUnitsPerSecond * 
-                          Time.deltaTime;
-        }
+        // float horizontalInput = Input.GetAxis("Horizontal");
+        // if (horizontalInput < 0)
+        // {
+        //     position.x += horizontalInput * ConfigurationUtils.BurgerMoveUnitsPerSecond * 
+        //                   Time.deltaTime;
+        // }
+        // else if (horizontalInput > 0)
+        // {
+        //     position.x += horizontalInput * ConfigurationUtils.BurgerMoveUnitsPerSecond * 
+        //                   Time.deltaTime;
+        // }
 
         // get new vertical position
         float verticalInput = Input.GetAxis("Vertical");
@@ -100,12 +107,19 @@ public class PlayerManager : MonoBehaviour
         {
             cooldownTimer.Run();
             canShoot = false;
-            Vector3 frenchFriesPos = transform.position;
-            frenchFriesPos.y += FrenchFriesPositionOffset;
-            GameObject frenchFries = BulletPool.GetFrenchFries();
-            frenchFries.transform.position = frenchFriesPos;
-            frenchFries.SetActive(true);
-            frenchFries.GetComponent<Bullet>().StartMoving();
+            // Vector3 bulletPos = transform.position;
+            // bulletPos.x += FrenchFriesPositionOffset;
+            
+            GameObject bullet1 = BulletPool.GetBullets();
+            bullet1.transform.position = shootPos[0].transform.position;
+            bullet1.SetActive(true);
+            bullet1.GetComponent<Bullet>().StartMoving();
+            
+            GameObject bullet2 = BulletPool.GetBullets();
+            bullet2.transform.position = shootPos[1].transform.position;
+            bullet2.SetActive(true);
+            bullet2.GetComponent<Bullet>().StartMoving();
+            
             AudioManager.Play(AudioClipName.BurgerShot);
         }
     }
@@ -121,8 +135,9 @@ public class PlayerManager : MonoBehaviour
         {
             Instantiate(prefabExplosion, 
                 coll.gameObject.transform.position, Quaternion.identity);
-            Destroy(coll.gameObject);
-            // TakeDamage(ConfigurationUtils.BearDamage);
+            // Destroy(coll.gameObject);
+            EnemyPool.ReturnEnemies(coll.gameObject);
+            TakeDamage(ConfigurationUtils.BearDamage);
         }
     }
 		
@@ -137,7 +152,8 @@ public class PlayerManager : MonoBehaviour
         {
             Instantiate(prefabExplosion, 
                 other.gameObject.transform.position, Quaternion.identity);
-            Destroy(other.gameObject);
+            // Destroy(other.gameObject);
+            EnemyPool.ReturnEnemies(other.gameObject);
         }
         else if (other.gameObject.CompareTag("EnemyProjectile"))
         {
@@ -145,7 +161,7 @@ public class PlayerManager : MonoBehaviour
             Instantiate(prefabExplosion, 
                 other.gameObject.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
-            // TakeDamage(ConfigurationUtils.BearProjectileDamage);
+            TakeDamage(ConfigurationUtils.BearProjectileDamage);
         }
     }
     
@@ -189,15 +205,15 @@ public class PlayerManager : MonoBehaviour
     /// <param name="damage">damage</param>
     void TakeDamage(int damage)
     {
-        // health = Mathf.Max(0, health - damage);
-        // unityEvents[EventName.HealthChangedEvent].Invoke(health);
-        // AudioManager.Play(AudioClipName.BurgerDamage);
-        //
-        // // check for game over
-        // if (health == 0)
-        // {
-        //     AudioManager.Play(AudioClipName.BurgerDeath);
-        //     unityEvents[EventName.GameOverEvent].Invoke(0);
-        // }
+        health = Mathf.Max(0, health - damage);
+        unityEvents[EventName.HealthChangedEvent].Invoke(health);
+        AudioManager.Play(AudioClipName.BurgerDamage);
+        
+        // check for game over
+        if (health == 0)
+        {
+            AudioManager.Play(AudioClipName.BurgerDeath);
+            unityEvents[EventName.GameOverEvent].Invoke(0);
+        }
     }
 }
